@@ -128,16 +128,7 @@ class Profile extends React.Component{
             </p>
           </div>
           {/* <hr /> */}
-          <div style={{}}>
-            <p
-              className='text- mb-1'
-              style={{ fontSize: "", fontWeight: "550" }}>
-              Roll number{" "}
-            </p>
-            <p className='select' style={{ fontSize: "" }}>
-              {this.currentUserData.rollNumber}
-            </p>
-          </div>
+          
           {/* <hr /> */}
           <div style={{}}>
             <p

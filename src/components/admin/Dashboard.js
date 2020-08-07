@@ -54,7 +54,7 @@ class Dashboard extends Component {
             />
           </div>
         </div>
-        <div className="mobile-sidebar col d-md-none d-none bg-light px-0 text-center">
+        <div className="mobile-sidebar col d-md-none d-none bg-light px-0 text-left">
           <div
             className="mobile-nav-item py-2 border-bottom"
             onClick={() => {
