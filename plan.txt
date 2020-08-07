@@ -1,0 +1,11 @@
+export axios.create({
+	baseURL: "http://projectportal.github.io/server"
+})
+
+axios.fetch("/", {
+	content_
+	username:
+	password:
+}, {
+	payload: adta.
+})

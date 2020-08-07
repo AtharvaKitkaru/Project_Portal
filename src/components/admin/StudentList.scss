@@ -1,0 +1,9 @@
+table tbody tr{
+  color: #63605f;
+    &:hover {
+      color: rgb(183, 32, 46);
+      background: rgba(231, 231, 231, 0.459);
+      cursor: pointer;
+      // transform: scale(1.02);
+    }
+}
