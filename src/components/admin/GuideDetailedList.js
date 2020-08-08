@@ -32,6 +32,7 @@ class GuideDetailedList extends React.Component {
   }
   detailInfo = () => {
     this.setState({ redirect: "/users/guide/:id" });
+    // window.location.href = "/users/guide/:id";
   };
 
   render() {
@@ -98,38 +99,27 @@ class GuideDetailedList extends React.Component {
                 <td class=''>Smart Cities</td>
                 <td class=''>2</td>
               </tr>
-              <tr class='' onClick={this.detailInfo}>
-                <td />
+              <tr class=''>
+                <td class=''>ABCD</td>
                 <td class=''>2</td>
                 <td class=''>Smart India</td>
-                <td />
+                <td class=''>2</td>
               </tr>
-              <tr class='' onClick={this.detailInfo}>
+              <tr class=''>
                 <td class=''>ABCD</td>
                 <td class=''>1</td>
                 <td class=''>Smart Cities</td>
                 <td class=''>2</td>
               </tr>
-              <tr class='' onClick={this.detailInfo}>
-                <td />
-                <td class=''>2</td>
-                <td class=''>Smart India</td>
-                <td />
-              </tr>
-              <tr class='' onClick={this.detailInfo}>
+              <tr class=''>
                 <td class=''>ABCD</td>
-                <td class=''>1</td>
-                <td class=''>Smart Cities</td>
-                <td class=''>2</td>
-              </tr>
-              <tr class='' onClick={this.detailInfo}>
-                <td />
                 <td class=''>2</td>
                 <td class=''>Smart India</td>
-                <td />
+                <td class=''>2</td>
               </tr>
             </tbody>
           </table>
+          <hr />
         </div>
         <Link to='/users/guide-detailed'>
           <div className='mx-auto p-2 back-button text-center my-5 rounded-lg'>

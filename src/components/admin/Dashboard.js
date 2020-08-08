@@ -20,6 +20,8 @@ import AssignmentDetails from "./AssignmentDetails";
 import FacultyForm from "./FacultyForm";
 import GroupSubmissionDetails from "./GroupSubmissionDetails";
 import GuideDetailedList from "./GuideDetailedList";
+import GradingStats from "./GradingStats";
+
 // import $ from "jquery";
 class Dashboard extends Component {
   constructor(props) {
@@ -229,7 +231,7 @@ class Dashboard extends Component {
             <Route path='/groups' component={GroupList} />
             <Route exact path='/group/:id' component={GroupDetails} />
             <Route exact path='/assignments' component={AssignmentList} />
-            <Route exact path='/statistics' component={Statistics} />
+            <Route exact path='/submission-statistics' component={Statistics} />
             <Route path='/create-assignments' component={AssignmentCreation} />
             <Route path='/projects' component={ProjectList} />
             <Route path='/project/:id' component={ProjectDetails} />
@@ -242,6 +244,8 @@ class Dashboard extends Component {
               path='/group-submission/:id'
               component={GroupSubmissionDetails}
             />
+            <Route exact path='/grade-statistics' component={GradingStats} />
+
             <Route exact path='/faculty-form' component={FacultyForm} />
           </div>
         </div>

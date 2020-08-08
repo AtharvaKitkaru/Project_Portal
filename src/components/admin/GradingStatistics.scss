@@ -1,17 +1,11 @@
-.student-list {
+.grading-stats {
   a:hover {
     text-decoration: none;
   }
-  table tbody tr {
-    color: #63605f;
-    &:hover {
-      color: rgb(183, 32, 46);
-      background: rgba(231, 231, 231, 0.459);
-      cursor: pointer;
-      // transform: scale(1.02);
-    }
+  tr:hover {
+    cursor: auto;
+    
   }
-
   .back-button {
     width: 30vh;
     background-color: rgb(183, 32, 46);

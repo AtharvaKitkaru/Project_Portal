@@ -58,13 +58,9 @@ class HandleRequests extends React.Component {
                 </div>
               </div>
               <div className='col-md-6 col-12 d-flex link  align-items-center py-2'>
-                <div
-                  className='text-primary'
-                  onClick={() => {
-                    window.location.href = "/group/:id";
-                  }}>
-                  View Group Details
-                </div>
+                <Link to='/group/:id'>
+                  <div className='text-primary'>View Group Details</div>
+                </Link>
               </div>
             </div>
           </div>

@@ -84,15 +84,15 @@ class GroupSubmissionDetails extends React.Component {
               <hr />
               <form>
                 <div className='row'>
-                  <div className='col-md-2 col-12'>
+                  <div className='col-md-4 col-12 text-center'>
                     <p className='text-center'>Weightage:</p>
                     <p className='text-center'>25</p>
                   </div>
-                  <div class='form-group col-md-5 col-12'>
+                  <div class='form-group col-md-8 col-12 text-center'>
                     <label for='grades'>Assign Grade</label>
                     <input
                       type='number'
-                      className='form-control pl-0'
+                      className='form-control pl-0 text-center'
                       id='grades'
                       placeholder='Enter the grades'
                     />

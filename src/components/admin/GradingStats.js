@@ -1,9 +1,8 @@
-import React from "react";
-import "./Statistics.scss";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ReactSearchBox from "react-search-box";
-
-class Statistics extends React.Component {
+import "./GradingStatistics.scss";
+class GradingStats extends Component {
   data = [
     {
       key: "john",
@@ -28,18 +27,19 @@ class Statistics extends React.Component {
   ];
   render() {
     return (
-      <div className='statistics mx-auto' style={{ width: "90%" }}>
+      <div className='grading-stats mx-auto' style={{ width: "90%" }}>
         <br />
         <div
-          className=' p-2 text-center shadow-sm rounded font-weight-bold  mx-auto'
+          className='p-2 px-3 text-center shadow-sm rounded font-weight-bold'
           style={{
             color: "rgb(183, 32, 46)",
             fontSize: "1.1em",
-            width: "auto",
             backgroundColor: "rgba(231, 231, 231, 0.459)",
           }}>
-          Summary Statistics
+          Grading Statistics
         </div>
+
+        <br />
         <div className='my-4'>
           <ReactSearchBox
             placeholder='Search here ...'
@@ -49,7 +49,6 @@ class Statistics extends React.Component {
             callback={(record) => console.log(record)}
           />
         </div>
-
         <div class='table-responsive-sm'>
           <table class='ui striped table'>
             <thead class='text-center'>
@@ -77,49 +76,49 @@ class Statistics extends React.Component {
             </thead>
             <tbody class='text-center'>
               <tr class=''>
-                <td class=''>Group no. 1</td>
-                <td class=''>Graded</td>
-                <td class=''>Graded</td>
-                <td class=''>Graded</td>
-                <td class=''>Graded</td>
-                <td class=''>Graded</td>
+                <td class=''>1814033</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
               </tr>
               <tr class=''>
-                <td class=''>Group no. 2</td>
-                <td class=''>Graded</td>
-                <td class=''>Graded</td>
-                <td class=''>Graded</td>
-                <td class=''>Graded</td>
-                <td class=''>Graded</td>
+                <td class=''>1814033</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
               </tr>
               <tr class=''>
-                <td class=''>Group no. 3</td>
-                <td class=''>Ungraded</td>
-                <td class=''>Ungraded</td>
-                <td class=''>Graded</td>
-                <td class=''>Ungraded</td>
-                <td class=''>Not Submitted</td>
+                <td class=''>1814033</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
               </tr>
               <tr class=''>
-                <td class=''>Group no. 4</td>
-                <td class=''>Ungraded</td>
-                <td class=''>Ungraded</td>
-                <td class=''>Not Submitted</td>
-                <td class=''>Not Submitted</td>
-                <td class=''>Not Submitted</td>
+                <td class=''>1814033</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
               </tr>
               <tr class=''>
-                <td class=''>Group no. 5</td>
-                <td class=''>Ungraded</td>
-                <td class=''>Ungraded</td>
-                <td class=''>Not Submitted</td>
-                <td class=''>Not Submitted</td>
-                <td class=''>Not Submitted</td>
+                <td class=''>1814033</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
+                <td class=''>23</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <Link to='/projects'>
+        <Link to='/grade-statistics'>
           <div className='mx-auto back-button p-2 text-center my-4 rounded-lg'>
             <i className='fa fa-arrow-down mr-2' aria-hidden='true' />
             Download
@@ -130,4 +129,4 @@ class Statistics extends React.Component {
   }
 }
 
-export default Statistics;
+export default GradingStats;

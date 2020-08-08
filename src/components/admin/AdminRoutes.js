@@ -17,6 +17,7 @@ import GroupSubmissionDetails from "./GroupSubmissionDetails";
 import Statistics from "./Statistics";
 import FacultyForm from "./FacultyForm";
 import GuideDetailedList from "./GuideDetailedList";
+import GradingStats from "./GradingStats";
 
 const AdminRoutes = () => {
   return (
@@ -27,7 +28,7 @@ const AdminRoutes = () => {
       <Route exact path='/groups' component={GroupList} />
       <Route exact path='/group/:id' component={GroupDetails} />
       <Route exact path='/assignments' component={AssignmentList} />
-      <Route exact path='/statistcs' component={Statistics} />
+      <Route exact path='/submission-statistcs' component={Statistics} />
       <Route exact path='/assignment/:id' component={AssignmentDetails} />
       <Route exact path='/projects' component={ProjectList} />
       <Route exact path='/project/:id' component={ProjectDetails} />
@@ -42,6 +43,7 @@ const AdminRoutes = () => {
         path='/group-submission/:id'
         component={GroupSubmissionDetails}
       />
+      <Route exact path='/grade-statistcs' component={GradingStats} />
     </Switch>
   );
 };

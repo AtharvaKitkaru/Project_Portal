@@ -1,11 +1,19 @@
 import React, { Component } from "react";
-export class GroupListView extends Component {
+import { Redirect, Link } from "react-router-dom";
 
+export class GroupListView extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { redirect: null };
+  }
   detailInfo = () => {
-    window.location.href = "/group/:id";
+    this.setState({ redirect: "/group/:id" });
   };
+
   render() {
-   
+    if (this.state.redirect) {
+      return <Redirect to={this.state.redirect} />;
+    }
     return (
       <div class='table-responsive'>
         <table class='ui striped table'>

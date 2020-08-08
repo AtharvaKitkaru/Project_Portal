@@ -26,19 +26,19 @@ class StudentList extends Component {
       value: "Karius",
     },
   ];
-  //   constructor(props) {
-  //     super(props);
-  //     this.state = { redirect: null };
-  //   }
+  constructor(props) {
+    super(props);
+    this.state = { redirect: null };
+  }
   detailInfo = () => {
-    // this.setState({ redirect: "/users/student/:id" });
-    window.location.href = "/users/student/:id";
+    this.setState({ redirect: "/users/student/:id" });
+    // window.location.href = "/users/student/:id";
   };
 
   render() {
-    // if (this.state.redirect) {
-    //   return <Redirect to={this.state.redirect} />;
-    // }
+    if (this.state.redirect) {
+      return <Redirect to={this.state.redirect} />;
+    }
     return (
       <div className='student-list mx-auto' style={{ width: "90%" }}>
         <br />

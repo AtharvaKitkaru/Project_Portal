@@ -52,7 +52,7 @@ class ProjectList extends React.Component {
         </div>
         <div className='my-4'>
           <ReactSearchBox
-            placeholder='Search for projecs here ...'
+            placeholder='Search for projects here ...'
             data={this.data}
             autoFocus='true'
             inputBoxBorderColor='#e1e6e2'
