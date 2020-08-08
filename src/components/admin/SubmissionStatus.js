@@ -20,110 +20,105 @@ class SubmissionStatus extends Component {
     }
     return (
       <div>
-        <div id="AssignmentList" className="container pt-3">
-          <ul className="nav nav-pills nav-justified nav-fill">
+        <div id='AssignmentList' className='container pt-3'>
+          <ul className='nav nav-pills nav-justified nav-fill'>
             <li
-              className="nav-item nav-link active"
+              className='nav-item nav-link active'
               style={{ cursor: "pointer" }}
-              onClick={event => {
+              onClick={(event) => {
                 let { target } = event;
                 $("#assignment-list").fadeOut("fast", () =>
                   this.setState({ category: "all" }, () => {
                     $(".nav-item.nav-link.active").removeClass("active");
                     $(target).addClass("active");
                     $("#assignment-list").fadeIn("fast");
-                  })
+                  }),
                 );
-              }}
-            >
+              }}>
               All
             </li>
             <li
-              className="nav-item nav-link"
+              className='nav-item nav-link'
               style={{ cursor: "pointer" }}
-              onClick={event => {
+              onClick={(event) => {
                 let { target } = event;
                 $("#assignment-list").fadeOut("fast", () =>
                   this.setState({ category: "graded" }, () => {
                     $(".nav-item.nav-link.active").removeClass("active");
                     $(target).addClass("active");
                     $("#assignment-list").fadeIn("fast");
-                  })
+                  }),
                 );
-              }}
-            >
+              }}>
               Graded
             </li>
             <li
-              className="nav-item nav-link"
+              className='nav-item nav-link'
               style={{ cursor: "pointer" }}
-              onClick={event => {
+              onClick={(event) => {
                 let { target } = event;
                 $("#assignment-list").fadeOut("fast", () =>
                   this.setState({ category: "ungraded" }, () => {
                     $(".nav-item.nav-link.active").removeClass("active");
                     $(target).addClass("active");
                     $("#assignment-list").fadeIn("fast");
-                  })
+                  }),
                 );
-              }}
-            >
+              }}>
               Ungraded
             </li>
             <li
-              className="nav-item nav-link"
+              className='nav-item nav-link'
               style={{ cursor: "pointer" }}
-              onClick={event => {
+              onClick={(event) => {
                 let { target } = event;
                 $("#assignment-list").fadeOut("fast", () =>
                   this.setState({ category: "unsub" }, () => {
                     $(".nav-item.nav-link.active").removeClass("active");
                     $(target).addClass("active");
                     $("#assignment-list").fadeIn("fast");
-                  })
+                  }),
                 );
-              }}
-            >
+              }}>
               Not Submitted yet
             </li>
           </ul>
           <br />
-          <div class="table-responsive-sm">
-            <table class="ui striped table">
+          <div class='table-responsive-sm'>
+            <table class='ui striped table'>
               <thead
-                class="text-center"
-                style={{ fontFamily: `'Courier New', Courier, monospace` }}
-              >
-                <tr class="">
-                  <th class="" scope="col">
+                class='text-center'
+                style={{ fontFamily: `'Courier New', Courier, monospace` }}>
+                <tr class=''>
+                  <th class='' scope='col'>
                     Group Number
                   </th>
-                  <th class="" scope="col">
+                  <th class='' scope='col'>
                     Submission Status
                   </th>
                 </tr>
               </thead>
-              <tbody class="text-center">
-                <tr class="" onClick={this.detailInfo}>
-                  <td class="">1</td>
-                  <td class="">Not Submitted</td>
+              <tbody class='text-center'>
+                <tr class='' onClick={this.detailInfo}>
+                  <td class=''>1</td>
+                  <td class=''>Not Submitted</td>
                 </tr>
-                <tr class="" onClick={this.detailInfo}>
-                  <td class="">2</td>
-                  <td class="">Graded</td>
+                <tr class='' onClick={this.detailInfo}>
+                  <td class=''>2</td>
+                  <td class=''>Graded</td>
                 </tr>
-                <tr class="" onClick={this.detailInfo}>
-                  <td class="">3</td>
-                  <td class="">Ungraded</td>
+                <tr class='' onClick={this.detailInfo}>
+                  <td class=''>3</td>
+                  <td class=''>Ungraded</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div
-            className="bg"
+            className='bg'
             style={{
               backgroundImage: `url(${AssignmentListGIF})`,
-              filter: "blur(0.16em)"
+              filter: "blur(0.16em)",
             }}
           />
         </div>

@@ -16,28 +16,30 @@ import AssignmentDetails from "./AssignmentDetails";
 import GroupSubmissionDetails from "./GroupSubmissionDetails";
 import Statistics from "./Statistics";
 import FacultyForm from "./FacultyForm";
+import GuideDetailedList from "./GuideDetailedList";
 
 const AdminRoutes = () => {
   return (
     <Switch>
       <Route path={["/", "/dashboard"]} component={Dashboard} />
-      <Route exact path="/users/students" component={StudentList} />
-      <Route exact path="/users/guides" component={GuideList} />
-      <Route exact path="/groups" component={GroupList} />
-      <Route exact path="/group/:id" component={GroupDetails} />
-      <Route exact path="/assignments" component={AssignmentList} />
-      <Route exact path="/statistcs" component={Statistics} />
-      <Route exact path="/assignment/:id" component={AssignmentDetails} />
-      <Route exact path="/projects" component={ProjectList} />
-      <Route exact path="/project/:id" component={ProjectDetails} />
-      <Route exact path="/users/guide/:id" component={GuideDetails} />
-      <Route exact path="/users/student/:id" component={StudentDetails} />
-      <Route exact path="/create-assignments" component={AssignmentCreation} />
-      <Route exact path="/handle-requests" component={HandleRequests} />
-      <Route exact path="/faculty-form" component={FacultyForm} />
+      <Route exact path='/users/students' component={StudentList} />
+      <Route exact path='/users/guides' component={GuideList} />
+      <Route exact path='/groups' component={GroupList} />
+      <Route exact path='/group/:id' component={GroupDetails} />
+      <Route exact path='/assignments' component={AssignmentList} />
+      <Route exact path='/statistcs' component={Statistics} />
+      <Route exact path='/assignment/:id' component={AssignmentDetails} />
+      <Route exact path='/projects' component={ProjectList} />
+      <Route exact path='/project/:id' component={ProjectDetails} />
+      <Route exact path='/users/guide/:id' component={GuideDetails} />
+      <Route path='/users/guide-detailed' component={GuideDetailedList} />
+      <Route exact path='/users/student/:id' component={StudentDetails} />
+      <Route exact path='/create-assignments' component={AssignmentCreation} />
+      <Route exact path='/handle-requests' component={HandleRequests} />
+      <Route exact path='/faculty-form' component={FacultyForm} />
       <Route
         exact
-        path="/group-submission/:id"
+        path='/group-submission/:id'
         component={GroupSubmissionDetails}
       />
     </Switch>

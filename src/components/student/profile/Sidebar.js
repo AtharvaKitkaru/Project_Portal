@@ -35,69 +35,70 @@ class Sidebar extends React.Component {
 
 	render() {
 		return (
-			<div
-				id="Sidebar"
-				className="bg-light m-0 p-0 text-center rounded-left h-100"
-			>
-				<div className="profile-pic container-fluid p-3 pb-0 mb-0">
-					<img
-						src={app.auth().currentUser.photoURL || `${UserImage}`}
-						className="w-100 h-100 mx-auto rounded-lg"
-						alt="user avatar"
-					/>
-				</div>
-				<div
-					className="p-1 mt-2"
-					style={{
-						color: "#dcdee0",
-						fontSize: "",
-						fontWeight: "450",
-					}}
-				>
-					<Link to="/profile/personal-section" className="link">
-						<div
-							id="tab1"
-							className="tab rounded p-2"
-							onClick={this.setCurrent}
-						>
-							{/* <i class="fa fa-user" aria-hidden="true"></i> {" "} */}
-							Personal
-						</div>
-					</Link>
+      <div
+        id='Sidebar'
+        className='bg-light m-0 p-0 text-center rounded-left h-100'>
+        <div
+          className='p-0 d-md-none '
+          onClick={() => {
+            $(".nav-options").toggleClass("d-none");
+          }}>
+          <i class='fa fa-bars' aria-hidden='true'></i>
+        </div>
+        <div className='profile-pic container-fluid p-3 pb-0 mb-0 d-md-block d-none'>
+          <img
+            src={app.auth().currentUser.photoURL || `${UserImage}`}
+            className='w-100 h-100 mx-auto rounded-lg '
+            alt='user avatar'
+          />
+        </div>
+        <div
+          className='p-1 nav-options mt-2 d-md-block d-none'
+          style={{
+            color: "#dcdee0",
+            fontSize: "",
+            fontWeight: "450",
+          }}>
+          <Link to='/profile/personal-section' className='link'>
+            <div
+              id='tab1'
+              className='tab rounded p-2'
+              onClick={this.setCurrent}>
+              {/* <i class="fa fa-user" aria-hidden="true"></i> {" "} */}
+              Personal
+            </div>
+          </Link>
 
-					<Link to="/profile/group-section" className="link">
-						<div
-							id="tab2"
-							className="tab rounded p-2 "
-							onClick={this.setCurrent}
-						>
-							{/* <i class="icon-group"></i> {" "} */}
-							Group
-						</div>
-					</Link>
+          <Link to='/profile/group-section' className='link'>
+            <div
+              id='tab2'
+              className='tab rounded p-2 '
+              onClick={this.setCurrent}>
+              {/* <i class="icon-group"></i> {" "} */}
+              Group
+            </div>
+          </Link>
 
-					<Link to="/profile/guide-section" className="link">
-						<div
-							id="tab3"
-							className="tab rounded p-2 "
-							onClick={this.setCurrent}
-						>
-							Guide
-						</div>
-					</Link>
+          <Link to='/profile/guide-section' className='link'>
+            <div
+              id='tab3'
+              className='tab rounded p-2 '
+              onClick={this.setCurrent}>
+              Guide
+            </div>
+          </Link>
 
-					<Link to="/profile/project-section" className="link">
-						<div
-							id="tab4"
-							className="tab rounded p-2"
-							onClick={this.setCurrent}
-						>
-							Project
-						</div>
-					</Link>
-				</div>
-			</div>
-		);
+          <Link to='/profile/project-section' className='link'>
+            <div
+              id='tab4'
+              className='tab rounded p-2'
+              onClick={this.setCurrent}>
+              Project
+            </div>
+          </Link>
+        </div>
+      </div>
+    );
 	}
 }
 export default Sidebar;

@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 class GuideDetails extends React.Component {
   render() {
     return (
-      <div className="guide-details mx-auto" style={{ width: "90%" }}>
+      <div className="guide-details mx-auto" style={ { width: "90%" } }>
         <br />
         <div
           className="p-2 px-3 text-center shadow-sm rounded font-weight-bold"
-          style={{
+          style={ {
             color: "rgb(183, 32, 46)",
             fontSize: "1.1em",
             backgroundColor: "rgba(231, 231, 231, 0.459)"
-          }}
+          } }
         >
           Guide Details
         </div>
@@ -34,9 +34,14 @@ class GuideDetails extends React.Component {
               <p className="font-weight-bold">abcd@somaiya.edu</p>
             </div>
             <hr />
+            <div className="">
+              <p className="text-muted">Domains</p>
+              <p className="font-weight-bold">AI, Network Sec</p>
+            </div>
+            <hr />
           </div>
           <div className="col-md-6 right-panel">
-            <ul className="list-group ">
+            {/*<ul className="list-group ">
               <div className="my-2">
                 <p className="text-muted">Project</p>
                 <Link to="/project/:id">
@@ -48,7 +53,7 @@ class GuideDetails extends React.Component {
                 </Link>
               </div>
             </ul>
-            <hr />
+            <hr />*/}
             <ul className="list-group">
               <p className="text-muted">
                 Group Numbers

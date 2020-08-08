@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
+import "./GuideDetailedList.scss";
 import { Redirect, Link } from "react-router-dom";
-import "./GuideList.scss";
 import ReactSearchBox from "react-search-box";
 
-class Guide extends Component {
+class GuideDetailedList extends React.Component {
   data = [
     {
       key: "john",
@@ -39,7 +39,7 @@ class Guide extends Component {
       return <Redirect to={this.state.redirect} />;
     }
     return (
-      <div className='guide mx-auto' style={{ width: "90%" }}>
+      <div className='detailed-list mx-auto' style={{ width: "90%" }}>
         <br />
         <div
           className='p-2 px-3 text-center shadow-sm rounded font-weight-bold'
@@ -48,7 +48,7 @@ class Guide extends Component {
             fontSize: "1.1em",
             backgroundColor: "rgba(231, 231, 231, 0.459)",
           }}>
-          Guide List
+          Guide Detailed List
         </div>
         <div className=' d-flex flex-md-row flex-column justify-content-between mx-auto mt-4 p-0'>
           <div className='col-md-7 col-12 p-0 pl-2 my-1 '>
@@ -61,12 +61,12 @@ class Guide extends Component {
             />
           </div>
           <div className='col-md-3 col-12 text-center p-0 my-1'>
-            <Link to='/users/guide-detailed'>
+            <Link to='/users/guides'>
               <div
                 className='back-button rounded-lg py-2 px-0 mx-auto'
                 style={{ marginBottom: "1em" }}>
                 <i className='fa fa-list mr-2' aria-hidden='true' />
-                See Detailed List
+                Back to Normal List
               </div>
             </Link>
           </div>
@@ -81,81 +81,57 @@ class Guide extends Component {
                   Faculty Name
                 </th>
                 <th class='' scope='col'>
-                  Group Numbers
+                  Group Number
                 </th>
                 <th class='' scope='col'>
-                  Department
+                  Project Title
+                </th>
+                <th class='' scope='col'>
+                  Number of Groups
                 </th>
               </tr>
             </thead>
             <tbody class='text-center'>
               <tr class='' onClick={this.detailInfo}>
                 <td class=''>ABCD</td>
-                <td class=''>1 , 2</td>
-                <td class=''>IT</td>
-              </tr>
-
-              <tr class='' onClick={this.detailInfo}>
-                <td class=''>ABC</td>
-                <td class=''>3 , 4</td>
-                <td class=''>IT</td>
+                <td class=''>1</td>
+                <td class=''>Smart Cities</td>
+                <td class=''>2</td>
               </tr>
               <tr class='' onClick={this.detailInfo}>
-                <td class=''>AB</td>
-                <td class=''>4, 7</td>
-                <td class=''>IT</td>
-              </tr>
-              <tr class='' onClick={this.detailInfo}>
-                <td class=''>A</td>
-                <td class=''>10 , 12</td>
-                <td class=''>IT</td>
+                <td />
+                <td class=''>2</td>
+                <td class=''>Smart India</td>
+                <td />
               </tr>
               <tr class='' onClick={this.detailInfo}>
                 <td class=''>ABCD</td>
-                <td class=''>1 , 2</td>
-                <td class=''>IT</td>
-              </tr>
-
-              <tr class='' onClick={this.detailInfo}>
-                <td class=''>ABC</td>
-                <td class=''>3 , 4</td>
-                <td class=''>IT</td>
+                <td class=''>1</td>
+                <td class=''>Smart Cities</td>
+                <td class=''>2</td>
               </tr>
               <tr class='' onClick={this.detailInfo}>
-                <td class=''>AB</td>
-                <td class=''>4, 7</td>
-                <td class=''>IT</td>
-              </tr>
-              <tr class='' onClick={this.detailInfo}>
-                <td class=''>A</td>
-                <td class=''>10 , 12</td>
-                <td class=''>IT</td>
+                <td />
+                <td class=''>2</td>
+                <td class=''>Smart India</td>
+                <td />
               </tr>
               <tr class='' onClick={this.detailInfo}>
                 <td class=''>ABCD</td>
-                <td class=''>1 , 2</td>
-                <td class=''>IT</td>
-              </tr>
-
-              <tr class='' onClick={this.detailInfo}>
-                <td class=''>ABC</td>
-                <td class=''>3 , 4</td>
-                <td class=''>IT</td>
+                <td class=''>1</td>
+                <td class=''>Smart Cities</td>
+                <td class=''>2</td>
               </tr>
               <tr class='' onClick={this.detailInfo}>
-                <td class=''>AB</td>
-                <td class=''>4, 7</td>
-                <td class=''>IT</td>
-              </tr>
-              <tr class='' onClick={this.detailInfo}>
-                <td class=''>A</td>
-                <td class=''>10 , 12</td>
-                <td class=''>IT</td>
+                <td />
+                <td class=''>2</td>
+                <td class=''>Smart India</td>
+                <td />
               </tr>
             </tbody>
           </table>
         </div>
-        <Link to='/users/guide'>
+        <Link to='/users/guide-detailed'>
           <div className='mx-auto p-2 back-button text-center my-5 rounded-lg'>
             <i className='fa fa-arrow-down mr-2' aria-hidden='true' />
             Download
@@ -165,4 +141,5 @@ class Guide extends Component {
     );
   }
 }
-export default Guide;
+
+export default GuideDetailedList;
